@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+       display:flex ;
+       justify-content: space-between;
+       background-color: teal;
+       align-items: center;
+  }
+  #abc{
+      /* ifam using nth of type why not working */
+    font-family: 'Palette Mosaic', cursive;
+    font-size: x-large;
+}
+ nav a{
+    text-decoration: none;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-size: 1.6rem;
+      color:snow;
+      /* margin: 10px; */
+      padding: 10px;
+      position: sticky;
+      top :2px;
+      
+
+  }
+  li{
+      list-style-type: none;
+    }
+    ul{
+        display:flex;
+        width: 650px;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: 42px;
+    }
+    li{
+        padding: 20px 10px;
+    }
+    nav+ a{
+         font-family: 'Palette Mosaic', cursive;
+         font-size: x-large;
+    }
+    @media screen and (max-width:725px){
+        nav,ul{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    /* code ended for responsive nav bar  except media queries*/
+    li:nth-of-type(1){
+        background-color: rgb(116, 173, 173);
+        box-sizing: border-box;
+        width: 100%;
+        border: solid teal 12px;
+        padding: 5px;
+    }
+    li:hover{
+        /* padding:0px; */
+        background-color: rgb(116, 173, 173);
+        box-sizing: border-box;
+        /* width: 100%; */
+        border: solid teal 12px;
+        padding: 0px;
+    
+    }
+    /* going to main content of website */
+    header{
+        width:80vw;
+        margin: 10px auto;
+        height:80vh;
+        border: 2px solid #ccc;
+    }
+ 
+   /* slider */
+   #slider{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-left: 15%;
+    margin-top: 5%;
+    width: 85vw;
+    height: 70vh;
+    margin:auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    animation-name: sliderAnim;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    /* background-image: url(pics/pic5.jpg); */
+    background-size: 100% 100%;
+}
+
+@keyframes sliderAnim{
+    0%{
+        background-image: url(https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGl6emElMjBzbGljZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    20%{
+        background-image: url(https://images.unsplash.com/photo-1590947132387-155cc02f3212?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGl6emElMjBzbGljZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    40%{
+        background-image: url(https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YnVyZ2Vyc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    60%{
+        background-image: url(https://images.unsplash.com/photo-1619096252214-ef06c45683e3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2FuZHdoaWNofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    80%{
+        background-image: url(https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZG9zYXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    100%{
+        background-image: url(https://images.unsplash.com/photo-1615435312366-2e4ae52255e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=633&q=80);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+/* ams */
+section{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 75vw;
+   
+    margin:30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+figure{
+    width: 300px;
+    border:1px solid #ccc;
+    margin:20px;
+    text-align: center;
+    box-shadow: 0px 0px 3px rgb(104,104,104);
+    transition: 100ms;
+}
+
+figure:hover{
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+figure img{
+    height: 200px;
+    width: 100%;
+}
+
+figcaption button{
+    padding: 10px 20px;
+    margin:10px;
+    font-size: 16px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    background:none;
+}
+
+figcaption button:hover{
+    background: lightslategray;
+    color:white;
+    cursor: pointer;
+}
+
+figcaption p{
+    font-weight: 300;
+}
